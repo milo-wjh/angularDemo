@@ -1,0 +1,287 @@
+@mixin imgblack {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+@mixin centerbox {
+	width: 1060px;
+	min-width: 1060px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.header {
+	min-width: 1060px;
+	width: 1060px;
+	margin: 0 auto;
+	background: #39f;
+	.active {
+		background: #0f0;
+	}
+}
+.top {
+	display: none;
+	position: fixed;
+	bottom: 200px;
+	right: 100px;
+	width: 100px;
+	height: 50px;
+	background: #39f;
+	z-index: 20;
+}
+.news-list {
+	width: 1060px;
+	height: auto;
+	margin: 0 auto;
+	.aside {
+		float: right;
+		height: 500px;
+		background: #999;
+	}
+	.banner {
+		height: 400px;
+		background: #e9e9e9;
+		img {
+			display: block;
+			width: 400px;
+			height: 400px;
+		}
+	}
+	.listbox li {
+		width: 100%;
+		padding: 15px 0;
+		border-bottom: 1px solid #333;
+		.imgbox {
+			float: left;
+			width: 260px;
+			height: 150px;
+			margin-right: 20px;
+			img {
+				@include imgblack;
+			}
+		}
+		.pressbox {
+			height: 15px;
+			background: #9f9f9f;
+			.now {
+				position: relative;
+				overflow: visible !important;
+				width: 0px;
+				height: 15px;
+				background: #f00;
+				text-align: center;
+				.now-point {
+					position: absolute;
+					top: 0;
+					right: -10px;
+					width: 20px;
+					height: 15px;
+					background: #39f;
+					box-shadow: 0 0 5px 2px #333;
+					z-index: 10;
+				}
+			}
+			
+		}
+
+	}
+	.listbox li.ng-enter, .listbox li.ng-move, .listbox li.ng-leave {
+		overflow: hidden;
+  	transition: 0.5s linear all;
+	}
+	.listbox li.ng-enter,
+	.listbox li.ng-leave.ng-leave-active,
+	.listbox li.ng-move {
+	  height: 0;
+	  margin-bottom: 0;
+	  opacity: 0;
+	  padding-bottom: 0;
+	  padding-top: 0;
+	  border-bottom: 1px solid #333;
+	}
+	.listbox li.ng-enter-active,
+	.listbox li.ng-leave,
+	.listbox li.ng-move.ng-move-active {
+	  height: 201px;
+	  opacity: 1;
+	  padding: 15px 0;
+		border-bottom: 1px solid #333;
+	}
+}
+.content-box {
+	@include centerbox;
+	.login-form.ng-invalid {
+		background: #0f0;
+	}
+	.form-group {
+		position: relative;
+		margin-bottom: 15px;
+			label {
+				margin-top: 7px;
+			}
+			.right-check {
+				position: absolute;
+				top: 42px;
+				left: -20px;
+				color: #0f0;
+			}
+			input.error {
+				border: 1px solid red;
+			}
+			.error {
+				color: red;
+			}
+			.codeValue {
+				line-height: 34px;
+				font-size: 20px;
+				color: #39f;
+			}
+			.reset, .validate {
+				height: 34px;
+				line-height: 34px;
+				font-size: 14px;
+			}
+			.validate {
+				color: red;
+			}
+		}
+}
+.decbox {
+	@include centerbox;
+}
+#bg.ng-enter {
+  -webkit-animation: 0.5s fadeIn;
+  -moz-animation: 0.5s fadeIn;
+  -o-animation: 0.5s fadeIn;
+  animation: 0.5s fadeIn;
+  z-index: 95;
+}
+#bg.ng-leave{
+  -webkit-animation: 0.5s fadeOut;
+  -moz-animation: 0.5s fadeOut;
+  -o-animation: 0.5s fadeOut;
+  animation: 0.5s fadeOut;
+  z-index: 95;
+}
+.phone {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone:first-child {
+  display: block;
+}
+
+.phone-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.footer {
+	width: 1060px;
+	height: 50px;
+	margin: 0 auto;
+	background: #000;
+}
+.companybox {
+	@include centerbox;
+	height: 800px;
+}
+html, body {
+	height: 100%;
+}
+.search {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -99;
+}
+.search .bg.ng-hide-remove {
+  -webkit-animation: 0.7s fadeIn;
+  -moz-animation: 0.7s fadeIn;
+  -o-animation: 0.7s fadeIn;
+  animation: 0.7s fadeIn;
+  z-index: 95;
+}
+.search .bg {
+	height: 100%;
+}
+.search .ng-hide-remove {
+  -webkit-animation: 0.7s bounceInDown;
+  -moz-animation: 0.7s bounceInDown;
+  -o-animation: 0.7s bounceInDown;
+  animation: 0.7s bounceInDown;
+  z-index: 95;
+}
+
+.search .ng-hide-add {
+  -webkit-animation: 0.7s bounceOutUp;
+  -moz-animation: 0.7s bounceOutUp;
+  -o-animation: 0.7s bounceOutUp;
+  animation: 0.7s bounceOutUp;
+  z-index: 95;
+}
+.search-box {
+	overflow: hidden;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 800px;
+	height: 800px;
+	background: yellow;
+	margin: -400px 0 0 -400px;
+	border-radius: 10px;
+}

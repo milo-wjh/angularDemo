@@ -1,0 +1,15 @@
+<div ng-controller="searchCtrl" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+	<div ng-show="searchShow" class="bg" ng-click="close($event)">
+		<div class="search-box" ng-show="searchShow">
+			<form action="http://www.baidu.com/s?wd=">
+				搜索栏:<input type="text" ng-model="keyword" name="wd" value="" ng-change="search()" auto-search="{{index}}" autocomplete="off" id="search">
+				<button type="submit">搜索</button>
+				<ul id="menu" ng-show="autoSearch">
+					<li ng-repeat="more in searchMore" hover>{{more}}</li>
+					<!-- <hover></hover> -->
+				</ul>
+				<test val="keyword" greet="search"></test>
+			</form>
+		</div>
+	</div>
+</div>

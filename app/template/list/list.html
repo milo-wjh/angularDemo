@@ -1,0 +1,75 @@
+<div class="news-list row" ng-controller="listCtrl">
+	<div class="banner">
+		<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+			<div uib-slide ng-repeat="slide in slides" index="slide.id">
+				<a href="" title="">
+					<img ng-src="{{slide.image}}" style="margin:auto;">
+				</a>
+				<div class="carousel-caption">
+					<h4>Slide {{slide.id}}</h4>
+					<p>{{slide.text}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="left-box col-sm-10">
+		<ul class="nav nav-bar">
+			<li class="col-sm-2 btn btn-info" ng-click="tab('phones')">哈哈</li>
+			<li class="col-sm-2 btn btn-info" ng-click="tab('test1')">呵呵</li>
+			<li class="col-sm-2 btn btn-info" ng-click="tab('test2')">嘻嘻</li>
+			<li class="col-sm-2 btn btn-info" ng-click="tab('test3')">嘿嘿</li>
+			<li class="col-sm-2 btn btn-info" ng-click="tab('test4')">啪啪</li>
+			<li class="col-sm-2 btn btn-info" ng-click="tab('test5')">哒哒</li>
+		</ul>
+		<ul class="listbox" > <!--   | filter:chose | orderBy:order -->
+			<li bindonce ng-repeat="con in list | startFrom: (bigCurrentPage - 1) * pageSize  | limitTo:pageSize" class="row listone">
+				<div class="imgbox col-sm-4">
+					<a ui-sref="dec({id:con.id})" title="">
+						<img src="" alt="" title="" data-ui-lazyload="{{con.imageUrl}}" watch="watch" repeat-end="selectLast()">
+					</a>
+				</div>
+				<div class="textbox col-sm-6">
+					<h2><a ui-sref="dec({id:con.id})" title="">{{con.name}}</a></h2>
+					<p><a ui-sref="dec({id:con.id})" title="">{{con.snippet}}</a></p>
+					<div class="pressbox">
+						<div class="now" ui-proload="{{con.progress}}">
+							<p>0%</p>
+							<div class="now-point"></div>
+						</div>
+					</div>
+					<uib-progressbar class="progress-striped active" value="con.progress" type="info" >{{con.progress}}%</uib-progressbar>
+				</div>
+				<div class="col-sm-2">
+					<span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+				</div>
+			</li>
+		</ul>
+		<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" items-per-page="pageSize" num-pages="numPages" ng-change="scrollTop(0)" next-text="下一页" previous-text="上一页"></ul>
+		<p ng-click="more()" ng-show="more">点击更多</p>
+	</div>
+	<div class="aside col-sm-2">
+		<form action="">
+			<div class="form-group">
+				<input type="text" name="" class="form-control" value="" ng-model="chose" placeholder="搜索" ng-change="scroll()">
+			</div>
+			<div class="form-group">
+				sort by:
+				<select name="" id="" ng-model="order" class="form-control" ng-click="scroll()">
+					<option value="name">名字</option>
+					<option value="snippet">内容</option>
+				</select>
+			</div>
+		</form>
+		<!-- <div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">排序选择
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="drop1">
+				<li ng-click="sortBy('name')">Action</li>
+		    <li ng-click="sortBy('snippet')">Another action</li>
+		    <li ng-click="sortBy('id')">Something else here</li>
+		    <li ng-click="sortBy('age')">Separated link</li>
+			</ul>
+		</div> -->
+	</div>
+</div>

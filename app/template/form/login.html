@@ -1,0 +1,34 @@
+<div class="login-form row" ng-init="vm.creatCode()">
+	<form name="loginForm" ng-submit="vm.submit()">
+		<div class="form-group clearfix">
+			<label class="col-md-2 text-right">用户名：</label>
+			<div class="col-md-10">
+				<input type="text" name="username" ng-model="username" ng-class="{'error': loginForm.username.$invalid && loginForm.username.$touched}" class="form-control" required>
+				<p ng-if="loginForm.username.$invalid && loginForm.username.$touched">用户名输入有误</p>
+			</div>
+		</div>
+		<div class="form-group clearfix">
+			<label for="password" class="col-md-2 text-right">密码：</label>
+			<div class="col-md-10">
+				<input type="password" name="password" id="password" class="form-control" ng-model="password" ng-class="{'error': loginForm.password.$invalid && loginForm.password.$touched}" ng-pattern="/^1[34578]\d{9}$/g" required>
+				<p>{{loginForm.password.$error}}</p>
+			</div>
+		</div>
+		<div class="form-group clearfix">
+			<label for="code" class="col-md-2 text-right">验证码：</label>
+			<div class="col-md-5">
+				<input type="text" name="code" id="code" class="form-control" value="" ng-model="vm.yzm" required compare="vm.codeValue">
+				<p>{{loginForm.code.$error}}</p>
+				<p ng-if="loginForm.code.$touched && loginForm"></p>
+			</div>
+			<div class="col-md-1 codeValue" style="height: 34px;" ng-click="vm.creatCode()">{{vm.codeValue}}</div>
+			<div class="col-md-1 reset" ng-click="vm.creatCode()">点击刷新</div>
+			<div class="col-md-2 validate text-left">{{vm.yzmMessage}}</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-2">
+				<button class="btn btn-default" type="submit" ng-disabled="loginForm.$invalid">提交</button>
+			</div>
+		</div>
+	</form>
+</div>

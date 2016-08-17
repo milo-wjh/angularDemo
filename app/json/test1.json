@@ -1,0 +1,18 @@
+[
+	{
+      "age": 4, 
+      "carrier": "Cellular South", 
+      "id": "samsung-gem", 
+      "imageUrl": "img/phones/l_pic.jpg", 
+      "name": "Samsung Gem\u2122", 
+      "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price."
+  }, 
+  {
+      "age": 7, 
+      "carrier": "Cellular South", 
+      "id": "lg-axis", 
+      "imageUrl": "img/phones/lg-axis.0.jpg", 
+      "name": "LG Axis", 
+      "snippet": "Android Powered, Google Maps Navigation, 5 Customizable Home Screens"
+  }
+]

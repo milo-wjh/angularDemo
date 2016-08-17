@@ -1,0 +1,29 @@
+<div class="header container" ng-controller="headerCtrl">
+	<ul class="nav navbar-nav navbar-center col-sm-8" data-toggle="buttons">
+		<li class="btn active">
+			<input type="radio">
+			<a ui-sref="index" title="">首页</a>
+		</li>
+		<li class="btn">
+			<input type="radio">
+			<a ui-sref="company" title="">分页</a>
+		</li>
+	<!-- 	<li class="col-sm-2" ng-class="active: active.">
+			<a ui-sref="index" title="">首页1</a>
+		</li>
+		<li class="col-sm-2" ng-class="active: active.">
+			<a ui-sref="index" title="">首页2</a>
+		</li>
+		<li class="col-sm-2" ng-class="active: active.">
+			<a ui-sref="index" title="">首页3</a>
+		</li>
+		<li class="col-sm-2" ng-class="active: active.">
+			<a ui-sref="index" title="">首页4</a>
+		</li> -->
+	</ul>
+	<div class="user-box col-sm-4">
+		<a ui-sref="login" title="">登录</a>
+		<a ui-sref="register" title="">注册</a>
+		<button class="btn btn-success" ng-click="showSearch()">搜索</button>
+	</div>
+</div>

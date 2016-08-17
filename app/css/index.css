@@ -1,0 +1,349 @@
+/* line 12, ../sass/index.scss */
+.header {
+  min-width: 1060px;
+  width: 1060px;
+  margin: 0 auto;
+  background: #39f;
+}
+/* line 17, ../sass/index.scss */
+.header .active {
+  background: #0f0;
+}
+
+/* line 21, ../sass/index.scss */
+.top {
+  display: none;
+  position: fixed;
+  bottom: 200px;
+  right: 100px;
+  width: 100px;
+  height: 50px;
+  background: #39f;
+  z-index: 20;
+}
+
+/* line 31, ../sass/index.scss */
+.news-list {
+  width: 1060px;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 35, ../sass/index.scss */
+.news-list .aside {
+  float: right;
+  height: 500px;
+  background: #999;
+}
+/* line 40, ../sass/index.scss */
+.news-list .banner {
+  height: 400px;
+  background: #e9e9e9;
+}
+/* line 43, ../sass/index.scss */
+.news-list .banner img {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+/* line 49, ../sass/index.scss */
+.news-list .listbox li {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+/* line 53, ../sass/index.scss */
+.news-list .listbox li .imgbox {
+  float: left;
+  width: 260px;
+  height: 150px;
+  margin-right: 20px;
+}
+/* line 58, ../sass/index.scss */
+.news-list .listbox li .imgbox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 62, ../sass/index.scss */
+.news-list .listbox li .pressbox {
+  height: 15px;
+  background: #9f9f9f;
+}
+/* line 65, ../sass/index.scss */
+.news-list .listbox li .pressbox .now {
+  position: relative;
+  overflow: visible !important;
+  width: 0px;
+  height: 15px;
+  background: #f00;
+  text-align: center;
+}
+/* line 72, ../sass/index.scss */
+.news-list .listbox li .pressbox .now .now-point {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 15px;
+  background: #39f;
+  box-shadow: 0 0 5px 2px #333;
+  z-index: 10;
+}
+/* line 87, ../sass/index.scss */
+.news-list .listbox li.ng-enter, .news-list .listbox li.ng-move, .news-list .listbox li.ng-leave {
+  overflow: hidden;
+  transition: 0.5s linear all;
+}
+/* line 91, ../sass/index.scss */
+.news-list .listbox li.ng-enter,
+.news-list .listbox li.ng-leave.ng-leave-active,
+.news-list .listbox li.ng-move {
+  height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  border-bottom: 1px solid #333;
+}
+/* line 101, ../sass/index.scss */
+.news-list .listbox li.ng-enter-active,
+.news-list .listbox li.ng-leave,
+.news-list .listbox li.ng-move.ng-move-active {
+  height: 201px;
+  opacity: 1;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* line 110, ../sass/index.scss */
+.content-box {
+  width: 1060px;
+  min-width: 1060px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+/* line 112, ../sass/index.scss */
+.content-box .login-form.ng-invalid {
+  background: #0f0;
+}
+/* line 115, ../sass/index.scss */
+.content-box .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+/* line 118, ../sass/index.scss */
+.content-box .form-group label {
+  margin-top: 7px;
+}
+/* line 121, ../sass/index.scss */
+.content-box .form-group .right-check {
+  position: absolute;
+  top: 42px;
+  left: -20px;
+  color: #0f0;
+}
+/* line 127, ../sass/index.scss */
+.content-box .form-group input.error {
+  border: 1px solid red;
+}
+/* line 130, ../sass/index.scss */
+.content-box .form-group .error {
+  color: red;
+}
+/* line 133, ../sass/index.scss */
+.content-box .form-group .codeValue {
+  line-height: 34px;
+  font-size: 20px;
+  color: #39f;
+}
+/* line 138, ../sass/index.scss */
+.content-box .form-group .reset, .content-box .form-group .validate {
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+}
+/* line 143, ../sass/index.scss */
+.content-box .form-group .validate {
+  color: red;
+}
+
+/* line 148, ../sass/index.scss */
+.decbox {
+  width: 1060px;
+  min-width: 1060px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+/* line 151, ../sass/index.scss */
+#bg.ng-enter {
+  -webkit-animation: 0.5s fadeIn;
+  -moz-animation: 0.5s fadeIn;
+  -o-animation: 0.5s fadeIn;
+  animation: 0.5s fadeIn;
+  z-index: 95;
+}
+
+/* line 158, ../sass/index.scss */
+#bg.ng-leave {
+  -webkit-animation: 0.5s fadeOut;
+  -moz-animation: 0.5s fadeOut;
+  -o-animation: 0.5s fadeOut;
+  animation: 0.5s fadeOut;
+  z-index: 95;
+}
+
+/* line 165, ../sass/index.scss */
+.phone {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+/* line 176, ../sass/index.scss */
+.phone:first-child {
+  display: block;
+}
+
+/* line 180, ../sass/index.scss */
+.phone-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+/* line 189, ../sass/index.scss */
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 194, ../sass/index.scss */
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+/* line 200, ../sass/index.scss */
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+/* line 207, ../sass/index.scss */
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 214, ../sass/index.scss */
+.specs dt {
+  font-weight: bold;
+}
+
+/* line 218, ../sass/index.scss */
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+/* line 224, ../sass/index.scss */
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 228, ../sass/index.scss */
+.footer {
+  width: 1060px;
+  height: 50px;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* line 234, ../sass/index.scss */
+.companybox {
+  width: 1060px;
+  min-width: 1060px;
+  margin: 0 auto;
+  padding: 15px 0;
+  height: 800px;
+}
+
+/* line 238, ../sass/index.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 241, ../sass/index.scss */
+.search {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+}
+
+/* line 248, ../sass/index.scss */
+.search .bg.ng-hide-remove {
+  -webkit-animation: 0.7s fadeIn;
+  -moz-animation: 0.7s fadeIn;
+  -o-animation: 0.7s fadeIn;
+  animation: 0.7s fadeIn;
+  z-index: 95;
+}
+
+/* line 255, ../sass/index.scss */
+.search .bg {
+  height: 100%;
+}
+
+/* line 258, ../sass/index.scss */
+.search .ng-hide-remove {
+  -webkit-animation: 0.7s bounceInDown;
+  -moz-animation: 0.7s bounceInDown;
+  -o-animation: 0.7s bounceInDown;
+  animation: 0.7s bounceInDown;
+  z-index: 95;
+}
+
+/* line 266, ../sass/index.scss */
+.search .ng-hide-add {
+  -webkit-animation: 0.7s bounceOutUp;
+  -moz-animation: 0.7s bounceOutUp;
+  -o-animation: 0.7s bounceOutUp;
+  animation: 0.7s bounceOutUp;
+  z-index: 95;
+}
+
+/* line 273, ../sass/index.scss */
+.search-box {
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 800px;
+  height: 800px;
+  background: yellow;
+  margin: -400px 0 0 -400px;
+  border-radius: 10px;
+}

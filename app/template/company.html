@@ -1,0 +1,54 @@
+<div class="container companybox">
+	<uib-accordion close-others="oneAtATime">
+		<div uib-accordion-group class="panel-default" heading="这是第一栏">
+			<div class="panel-default">123123</div>
+			<div class="panel-default">123123</div>
+			<uib-accordion>
+				<div uib-accordion-group class="panel-default" heading="12">
+					<div class="panel-success">234234</div>
+					<div class="panel-success">234234</div>
+					<div class="panel-success">234234</div>
+					<uib-accordion>
+						<div uib-accordion-group class="panel-success" heading="13242342">
+							lskjdflksdjflksdjflksdjf
+						</div>
+					</uib-accordion>
+				</div>
+			</uib-accordion>
+			<div class="panel-default">123123</div>
+			<div class="panel-default">123123</div>
+
+		</div>
+		<div uib-accordion-group ng-repeat="slide in slides" class="panel-success" heading="slide.text">{{slide.image}}</div>
+	</uib-accordion>
+
+
+	<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed" >Toggle collapse Vertically</button>
+	<hr>
+	<div uib-collapse="isCollapsed">
+		<div class="well well-lg">Some content</div>
+	</div>
+
+
+	<div style="display:inline-block; min-height:290px;">
+    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+    {{dt}}
+  </div>
+
+  <uib-tabset active="activeJustified" justified="true">
+		<uib-tab index="0" heading="Justified">Justified content</uib-tab>
+		<uib-tab index="1" heading="SJ">Short Labeled Justified content</uib-tab>
+		<uib-tab index="2" heading="Long Justified">Long Labeled Justified content</uib-tab>
+  </uib-tabset>
+
+
+	<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" items-per-page="5" num-pages="numPages"></ul>
+	<input type="text" name="" ng-model="tiao" value="">
+	<button ng-click="setPage(tiao)">go</button>
+	<pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
+
+	<span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+  <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+
+  <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre>
+</div>
